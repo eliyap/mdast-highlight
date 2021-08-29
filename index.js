@@ -8,7 +8,7 @@ var exitMark = function (token) {
 };
 var handleMark = function (node, _, context) {
     var exit = context.enter('emphasis');
-    var value = container_phrasing_1.containerPhrasing(node, context, { before: '~', after: '~' });
+    var value = (0, container_phrasing_1.containerPhrasing)(node, context, { before: '~', after: '~' });
     exit();
     return '~~' + value + '~~';
 };
