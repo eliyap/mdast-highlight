@@ -2,6 +2,7 @@
   "name": "mdast-highlight",
   "version": "1.0.0",
   "description": "Pandoc Highlight Support in MDAST",
+  "type": "module",
   "main": "index.js",
   "scripts": {
     "build": "tsc",
