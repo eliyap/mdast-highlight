@@ -4,6 +4,8 @@ import { toMarkdown } from 'mdast-util-to-markdown';
 import { removePosition } from 'unist-util-remove-position';
 
 tape('example', (t) => {
-    t.deepEqual(1, 1);
+    t.deepEqual({}, {
+        fromMarkdown,
+    });
     t.end();
 });
