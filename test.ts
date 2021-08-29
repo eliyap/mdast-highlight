@@ -4,4 +4,5 @@ import { toMarkdown } from 'mdast-util-to-markdown';
 
 tape('example', (t) => {
     t.deepEqual(1, 1);
+    t.end();
 });
