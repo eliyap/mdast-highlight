@@ -23,6 +23,7 @@
   },
   "dependencies": {
     "@types/mdast": "^3.0.10",
-    "mdast-util-from-markdown": "^1.0.0"
+    "mdast-util-from-markdown": "^1.0.0",
+    "mdast-util-to-markdown": "^1.2.1"
   }
 }
