@@ -4,7 +4,8 @@
   "description": "Pandoc Highlight Support in MDAST",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tsc",
+    "test-api": "tsc && node --conditions development test.js"
   },
   "repository": {
     "type": "git",
@@ -18,6 +19,13 @@
   },
   "homepage": "https://github.com/eliyap/mdast-highlight#readme",
   "devDependencies": {
+    "@types/tape": "^4.13.2",
+    "tape": "^5.3.1",
     "typescript": "^4.4.2"
+  },
+  "dependencies": {
+    "@types/mdast": "^3.0.10",
+    "mdast-util-from-markdown": "^1.0.0",
+    "mdast-util-to-markdown": "^1.2.1"
   }
 }
