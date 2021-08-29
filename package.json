@@ -20,5 +20,8 @@
   "homepage": "https://github.com/eliyap/mdast-highlight#readme",
   "devDependencies": {
     "typescript": "^4.4.2"
+  },
+  "dependencies": {
+    "@types/mdast": "^3.0.10"
   }
 }
