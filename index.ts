@@ -7,7 +7,7 @@ import {
     Options as ToMarkdownExtension,
     Handle as ToMarkdownHandle,
 } from 'mdast-util-to-markdown';
-import { containerPhrasing } from "mdast-util-to-markdown/lib/util/container-phrasing";
+import { containerPhrasing } from "mdast-util-to-markdown/lib/util/container-phrasing.js";
 
 declare module 'mdast' {
     interface StaticPhrasingContentMap {
