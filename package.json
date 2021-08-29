@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/eliyap/mdast-highlight/issues"
   },
-  "homepage": "https://github.com/eliyap/mdast-highlight#readme"
+  "homepage": "https://github.com/eliyap/mdast-highlight#readme",
+  "devDependencies": {
+    "typescript": "^4.4.2"
+  }
 }
