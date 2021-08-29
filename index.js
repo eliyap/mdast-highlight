@@ -1,23 +1,20 @@
-"use strict";
-exports.__esModule = true;
-exports.pandocMarkToMarkdown = exports.pandocMarkFromMarkdown = void 0;
-var container_phrasing_1 = require("mdast-util-to-markdown/lib/util/container-phrasing");
-var enterMark = function (token) {
+import { containerPhrasing } from "mdast-util-to-markdown/lib/util/container-phrasing.js";
+const enterMark = function (token) {
 };
-var exitMark = function (token) {
+const exitMark = function (token) {
 };
-var handleMark = function (node, _, context) {
-    var exit = context.enter('emphasis');
-    var value = container_phrasing_1.containerPhrasing(node, context, { before: '~', after: '~' });
+const handleMark = function (node, _, context) {
+    const exit = context.enter('emphasis');
+    const value = containerPhrasing(node, context, { before: '~', after: '~' });
     exit();
     return '~~' + value + '~~';
 };
-exports.pandocMarkFromMarkdown = {
+export const pandocMarkFromMarkdown = {
     canContainEols: ['mark'],
     enter: { mark: enterMark },
     exit: { mark: exitMark }
 };
-exports.pandocMarkToMarkdown = {
+export const pandocMarkToMarkdown = {
     unsafe: [{ character: '~', inConstruct: 'phrasing' }],
-    handlers: { "delete": handleMark }
+    handlers: { delete: handleMark }
 };
