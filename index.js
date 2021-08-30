@@ -3,6 +3,7 @@ const enterMark = function (token) {
     this.enter({ type: 'mark', children: [] }, token);
 };
 const exitMark = function (token) {
+    this.exit(token);
 };
 const handleMark = function (node, _, context) {
     const exit = context.enter('emphasis');

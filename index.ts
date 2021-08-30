@@ -21,11 +21,11 @@ export interface Mark extends Parent {
 }
 
 const enterMark: FromMarkdownHandle = function (token) {
-    this.enter({ type: 'mark', children: [] }, token)
+    this.enter({ type: 'mark', children: [] }, token);
 }
 
 const exitMark: FromMarkdownHandle = function (token) {
-
+    this.exit(token);
 }
 
 const handleMark: ToMarkdownHandle = function (node, _, context) {
