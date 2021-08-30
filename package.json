@@ -29,6 +29,7 @@
     "@types/mdast": "^3.0.10",
     "mdast-util-from-markdown": "^1.0.0",
     "mdast-util-to-markdown": "^1.2.1",
+    "micromark-extension-pandoc-highlight": "^1.0.0",
     "micromark-util-types": "^1.0.1"
   }
 }
