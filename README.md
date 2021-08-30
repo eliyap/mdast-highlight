@@ -1,2 +1,3 @@
-# mdast-highlight
- Pandoc Highlight Support in MDAST
+# mdast-util-mark
+
+`mark` support in MDAST using ==equals signs==.

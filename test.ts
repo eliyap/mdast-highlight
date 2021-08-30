@@ -1,7 +1,7 @@
 import { fromMarkdown } from 'mdast-util-from-markdown';
 import { toMarkdown } from 'mdast-util-to-markdown';
 import { removePosition } from 'unist-util-remove-position';
-import { pandocHighlight } from 'micromark-extension-pandoc-highlight/dev/index.js';
+import { pandocMark } from 'micromark-extension-mark/dev/index.js';
 import {
     pandocMarkFromMarkdown,
     pandocMarkToMarkdown,
@@ -12,7 +12,7 @@ test('markdown -> mdast', (t) => {
     t.deepEqual(
         removePosition(
             fromMarkdown('a ==b== c.', {
-                extensions: [pandocHighlight()],
+                extensions: [pandocMark()],
                 mdastExtensions: [pandocMarkFromMarkdown],
             }),
             true
@@ -36,6 +36,7 @@ test('markdown -> mdast', (t) => {
     t.deepEqual(
         removePosition(
             fromMarkdown('a ==b\nc== d.', {
+                extensions: [pandocMark()],
                 mdastExtensions: [pandocMarkFromMarkdown],
             }),
             true
