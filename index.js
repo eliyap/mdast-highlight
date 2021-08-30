@@ -6,7 +6,7 @@ const exitMark = function (token) {
     this.exit(token);
 };
 const handleMark = function (node, _, context) {
-    const exit = context.enter('emphasis');
+    const exit = context.enter('mark');
     const value = containerPhrasing(node, context, { before: '=', after: '=' });
     exit();
     return '==' + value + '==';

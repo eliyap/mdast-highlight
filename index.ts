@@ -29,7 +29,7 @@ const exitMark: FromMarkdownHandle = function (token) {
 }
 
 const handleMark: ToMarkdownHandle = function (node, _, context) {
-    const exit = context.enter('emphasis')
+    const exit = context.enter('mark')
     const value = containerPhrasing(node, context, { before: '=', after: '=' })
     exit()
     return '==' + value + '=='
