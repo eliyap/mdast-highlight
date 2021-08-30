@@ -21,7 +21,7 @@ export interface Mark extends Parent {
 }
 
 const enterMark: FromMarkdownHandle = function (token) {
-
+    this.enter({ type: 'mark', children: [] }, token)
 }
 
 const exitMark: FromMarkdownHandle = function (token) {
@@ -30,9 +30,9 @@ const exitMark: FromMarkdownHandle = function (token) {
 
 const handleMark: ToMarkdownHandle = function (node, _, context) {
     const exit = context.enter('emphasis')
-    const value = containerPhrasing(node, context, { before: '~', after: '~' })
+    const value = containerPhrasing(node, context, { before: '=', after: '=' })
     exit()
-    return '~~' + value + '~~'
+    return '==' + value + '=='
 }
 
 export const pandocMarkFromMarkdown: FromMarkdownExtension = {
@@ -42,6 +42,6 @@ export const pandocMarkFromMarkdown: FromMarkdownExtension = {
 }
 
 export const pandocMarkToMarkdown: ToMarkdownExtension = {
-    unsafe: [{ character: '~', inConstruct: 'phrasing' }],
-    handlers: { delete: handleMark }
+    unsafe: [{ character: '=', inConstruct: 'phrasing' }],
+    handlers: { mark: handleMark }
 }
