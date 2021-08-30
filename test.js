@@ -1,7 +1,7 @@
 import { fromMarkdown } from 'mdast-util-from-markdown';
 import { toMarkdown } from 'mdast-util-to-markdown';
 import { removePosition } from 'unist-util-remove-position';
-import { pandocHighlight } from 'micromark-extension-pandoc-highlight/dev/index.js';
+import { pandocHighlight } from 'micromark-extension-mark/dev/index.js';
 import { pandocMarkFromMarkdown, pandocMarkToMarkdown, } from './index.js';
 import test from 'tape';
 test('markdown -> mdast', (t) => {
